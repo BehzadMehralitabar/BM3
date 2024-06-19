@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوتیک پاسارگارد</title>
+    <link rel="stylesheet" href="style.css"> 
+   
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo1.jpg" alt="Logo" class="logo">
+           
+            <section class="hero">
+                <h1>به فروشگاه پاسارگارد خوش آمدید</h1>
+                <p>بهترین هارا از ما بخواهید</p>
+            </section>
+        </div>
+    </header>
+    <main>
+        
+
+        <section class="login-form">
+            <h2>ورود به حساب کاربری</h2>
+            <form id="loginForm">
+                <label for="username">نام کاربری</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">رمز عبور</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">ورود</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p> پوشاک تخت جمشید<br>ارتباط با ما: 09122222222<br> &copy;  تمامی حقوق محفوظ است    </p>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+          
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username && password) {
+              
+                window.location.href = 'Menu.html';
+            } else {
+                alert('لطفاً همه فیلدها را پر کنید.');
+            }
+        });
+    </script>
+
+</body>
+</html>
